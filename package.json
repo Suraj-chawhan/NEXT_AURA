@@ -11,11 +11,15 @@
   "dependencies": {
     "@react-three/drei": "^9.121.5",
     "@react-three/fiber": "^8.17.14",
+    "bcrypt": "^5.1.1",
     "gsap": "^3.12.7",
+    "json-web-token": "^3.2.0",
+    "mongoose": "^8.10.0",
     "next": "14.2.20",
     "next-auth": "^4.24.11",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
     "eslint": "^8",
