@@ -7,7 +7,7 @@ import { Html, Stars } from "@react-three/drei";
 import io from "socket.io-client";
 import Model1 from "../../../public/Space";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = "https://websocket-jarvis-eyif.onrender.com";
 const PAUSE_THRESHOLD = 1500;
 
 function Assistant() {

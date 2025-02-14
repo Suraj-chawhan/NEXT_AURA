@@ -10,10 +10,10 @@ const Footer = () => {
                 <h1> &copy; 2022 Company, Inc </h1>
             </div>
             <div className='flex justify-center gap-12 ml-20 items-center w-1/2'>
-                <FaInstagram/>
-                <FaFacebook/>
-                <FaLinkedin/>
-                <FaWhatsapp/>
+                <FaInstagram className='cursor-pointer'/>
+                <FaFacebook className='cursor-pointer'/>
+                <FaLinkedin className='cursor-pointer'/>
+                <FaWhatsapp className='cursor-pointer'/>
                 
             </div>
         </div>
