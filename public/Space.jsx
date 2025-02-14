@@ -17,11 +17,11 @@ export default function Model1(props) {
   const ref = useRef();
 
   useFrame(() => {
-    ref.current.rotation.z += 0.001;
+    ref.current.rotation.y += 0.01;
   });
 
   return (
-    <group {...props} dispose={null} ref={ref}>
+    <group {...props} dispose={null} ref={ref} position={[0, 0, 0]}>
       <points
         geometry={nodes.Object_2.geometry}
         material={materials["Scene_-_Root"]}

@@ -1,15 +1,14 @@
-import React from "react";
-import Space from "./(components)/spacemodel/page";
-import Assistant from "./(components)/Assistant/page";
-import Quiz from "./(components)/Quiz/page";
-import FlipCardGame from "./(components)/Flip/page";
+import Slidebar from "@/Components/Slidebar";
+import Navbar from "../Components/Navbar";
+import Gamebox from "@/Components/Gamebox";
+import Footer from "@/Components/Footer";
 
-function index() {
+export default function Home() {
   return (
-    <div className="w-[100%] h-[100vh]">
-      <Assistant />
-    </div>
+    <>
+      <Navbar />
+      <Gamebox />
+      <Footer />
+    </>
   );
 }
-
-export default index;

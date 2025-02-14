@@ -2,10 +2,10 @@
 
 import { Canvas } from "@react-three/fiber";
 import React, { useState, useEffect, useRef } from "react";
-import Model from "../../../../public/Idle2";
+import Model from "../../../public/Suraj";
 import { Html, Stars } from "@react-three/drei";
 import io from "socket.io-client";
-import Model1 from "../../../../public/Space";
+import Model1 from "../../../public/Space";
 
 const SERVER_URL = "http://localhost:5000";
 const PAUSE_THRESHOLD = 1500;
