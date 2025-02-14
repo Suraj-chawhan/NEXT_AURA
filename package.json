@@ -12,10 +12,11 @@
     "@react-three/drei": "^9.121.5",
     "@react-three/fiber": "^8.17.14",
     "gsap": "^3.12.7",
-    "next": "14.2.20",
+    "next": "^14.2.24",
     "next-auth": "^4.24.11",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-icons": "^5.4.0"
   },
   "devDependencies": {
     "eslint": "^8",
