@@ -115,11 +115,11 @@ const MainContent = () => {
         >
           <div className="relative aspect-square overflow-hidden">
             <Image
-              src="/Images/logo.jpg"
-              width={50} // Adjust as needed
-              height={50} // Adjust as needed
-              className="w-12 h-12 rounded-full border-2 border-white"
-              alt="Logo"
+              src={card.image}
+              alt={card.title}
+              width={50}
+              height={50}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
           </div>
           <div className="p-6">
