@@ -117,8 +117,8 @@ const MainContent = () => {
             <Image
               src={card.image}
               alt={card.title}
-              width={10}
-              height={10}
+              width={1}
+              height={1}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
           </div>
@@ -151,8 +151,8 @@ const Navbar = () => {
           <div className="flex items-center">
             <Image
               src="/Images/logo.jpg"
-              width={10}
-              height={10}
+              width={1}
+              height={1}
               className="w-12 h-12 rounded-full border-2 border-white"
               alt="Logo"
             />
