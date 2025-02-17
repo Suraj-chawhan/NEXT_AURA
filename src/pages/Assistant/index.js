@@ -2,12 +2,13 @@
 
 import { Canvas } from "@react-three/fiber";
 import React, { useState, useEffect, useRef } from "react";
-import Model from "../../../public/Suraj";
+import Model from "../../../public/Suraj"; // Ensure this path is correct based on your structure
 import { Html, Stars } from "@react-three/drei";
+
 import io from "socket.io-client";
 import Model1 from "../../../public/Space";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = "https://websocket-jarvis-eyif.onrender.com";
 const PAUSE_THRESHOLD = 1500;
 
 function Assistant() {
@@ -18,6 +19,7 @@ function Assistant() {
   const [socket, setSocket] = useState(null);
   const recognitionRef = useRef(null);
   const timeoutRef = useRef(null);
+  const lastSpokenTextRef = useRef(""); // To track last spoken response
 
   useEffect(() => {
     const socketConnection = io(SERVER_URL);
@@ -58,6 +60,11 @@ function Assistant() {
 
   const handleSpeechResponse = (response) => {
     console.log("Server response:", response);
+
+    // Prevent speaking again if the response is the same
+    if (lastSpokenTextRef.current === response) return;
+    lastSpokenTextRef.current = response;
+
     const speech = new SpeechSynthesisUtterance(response);
     speech.lang = "en-US";
     speech.rate = 1;
@@ -101,7 +108,7 @@ function Assistant() {
   };
 
   return (
-    <div className="justify-center w-[100%] h-screen flex flex-col bg-black-900 items-center ">
+    <div className="justify-center w-full h-screen flex flex-col bg-black-900 items-center">
       <button
         className="px-4 py-2 bg-blue-600 text-white rounded-md"
         onClick={toggleListening}
@@ -109,7 +116,7 @@ function Assistant() {
         {isListening ? "Stop Listening" : "Start Listening"}
       </button>
 
-      <Canvas className=" w-[100%] h-[80%] bg-black mt-5">
+      <Canvas className="w-full h-[80%] bg-black mt-5">
         <ambientLight intensity={4} color="#ffffff" />
         <Stars
           radius={100}
@@ -120,7 +127,7 @@ function Assistant() {
           fade
           speed={1}
         />
-        <Model1 />
+
         <Model isSpeaking={isSpeaking} />
       </Canvas>
     </div>

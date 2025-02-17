@@ -11,13 +11,6 @@ export default function Model({ isSpeaking, ...props }) {
   const { nodes, materials } = useGraph(clone);
   const [lastUpdateTime, setLastUpdateTime] = useState(0);
 
-  useEffect(() => {
-    // Set hair color to blue
-    if (materials.Wolf3D_Hair) {
-      materials.Wolf3D_Hair.color.set("blue");
-    }
-  }, [materials]);
-
   useFrame((state, delta) => {
     if (isSpeaking) {
       // Update material color to green when speaking
