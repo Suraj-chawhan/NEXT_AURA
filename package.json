@@ -11,9 +11,10 @@
   "dependencies": {
     "@react-three/drei": "^9.121.5",
     "@react-three/fiber": "^8.17.14",
-    "@react-three/rapier": "^1.5.0",
+    "axios": "^1.7.9",
     "bcrypt": "^5.1.1",
     "gsap": "^3.12.7",
+    "locomotive-scroll": "^5.0.0-beta.21",
     "next": "14.2.20",
     "next-auth": "^4.24.11",
     "react": "^18",

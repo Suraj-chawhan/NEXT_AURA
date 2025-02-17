@@ -241,20 +241,13 @@ const Navbar = () => {
   );
 };
 
-export default function Home() {
+export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="flex flex-col gap-2">
       <Navbar />
-      <main className="flex-grow">
-        <MainContent />
-      </main>
-      <footer className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8 mt-auto">
-        <div className="container mx-auto text-center">
-          <p className="text-lg">&copy; 2024 GameHub. All rights reserved.</p>
-          <p className="mt-2 text-sm opacity-90">
-            Crafted with passion for interactive experiences
-          </p>
-        </div>
+      <MainContent />
+      <footer className="self-center">
+        All right reserve by suraj chawhan
       </footer>
     </div>
   );
