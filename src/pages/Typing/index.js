@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const TypingMaster = () => {
@@ -62,7 +63,13 @@ const TypingMaster = () => {
   return (
     <div className="flex justify-between relative">
       <div className="flex items-center justify-center">
-        <img src="/Animated/boy.gif" className="h-60" alt="" />
+        <Image
+          src="/Animated/boy.gif"
+          width={10}
+          height={10}
+          className="h-60"
+          alt=""
+        />
       </div>
 
       <div className="min-h-screen bg-gray-100 py-12 px-4">
@@ -119,7 +126,13 @@ const TypingMaster = () => {
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <img src="/Animated/boy.gif" className="h-60" alt="" />
+        <Image
+          src="/Animated/boy.gif"
+          width={10}
+          height={10}
+          className="h-60"
+          alt=""
+        />
       </div>
     </div>
   );

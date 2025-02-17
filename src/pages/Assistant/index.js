@@ -56,7 +56,7 @@ function Assistant() {
     } else {
       alert("Your browser does not support Speech Recognition.");
     }
-  }, [socket]);
+  }, [socket, handleSpeechResult]);
 
   const handleSpeechResponse = (response) => {
     console.log("Server response:", response);

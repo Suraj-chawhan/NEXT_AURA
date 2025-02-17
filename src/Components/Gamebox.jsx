@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+import Image from "next/image";
 const MainContent = () => {
   const gridRef = useRef(null);
 
@@ -90,9 +90,11 @@ const MainContent = () => {
           key={card.id}
           className="card bg-white shadow-lg overflow-hidden p-4 cursor-pointer border-black border-2 rounded-xl"
         >
-          <img
+          <Image
             src={card.image}
             alt={card.title}
+            width={10}
+            height={10}
             className="w-full h-80 object-cover rounded-md"
           />
           <h3 className="text-lg font-semibold mt-2 text-black">

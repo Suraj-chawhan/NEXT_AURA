@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const MainContent = () => {
   const gridRef = useRef(null);
@@ -114,9 +115,11 @@ const MainContent = () => {
           className="card group bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl border border-gray-100"
         >
           <div className="relative aspect-square overflow-hidden">
-            <img
+            <Image
               src={card.image}
               alt={card.title}
+              width={10}
+              height={10}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
           </div>
@@ -147,8 +150,10 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img
+            <Image
               src="/Images/logo.jpg"
+              width={10}
+              height={10}
               className="w-12 h-12 rounded-full border-2 border-white"
               alt="Logo"
             />

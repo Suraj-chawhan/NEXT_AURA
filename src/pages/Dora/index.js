@@ -27,7 +27,7 @@ export default function Game() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [position, gameOver]);
+  }, [position, gameOver, lanePositions]);
 
   const restartGame = () => {
     setScore(0);

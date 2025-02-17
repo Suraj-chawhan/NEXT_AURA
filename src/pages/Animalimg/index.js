@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState } from "react";
 
 const animals = [
@@ -60,9 +61,11 @@ const AnimalQuiz = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-500 text-white">
       <h1 className="text-3xl font-bold mb-4">Animal Quiz</h1>
-      <img
+      <Image
         src={currentAnimal.img}
         alt={currentAnimal.name}
+        width={10}
+        height={10}
         className="w-64 h-64 object-cover rounded-lg shadow-lg"
       />
       <p className="text-xl mt-2">Is this a {randomName}?</p>

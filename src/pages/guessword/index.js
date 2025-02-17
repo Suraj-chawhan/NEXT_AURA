@@ -236,7 +236,7 @@ const HangmanGame = () => {
   // On mount, choose a random animal
   useEffect(() => {
     chooseRandomAnimalName();
-  }, []);
+  }, [chooseRandomAnimalName]);
 
   const getRandomNumber = (min, max) => {
     return Math.trunc(Math.random() * (max - min) + min);
