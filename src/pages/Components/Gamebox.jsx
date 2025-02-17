@@ -2,22 +2,22 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+import Image from "next/image";
 const MainContent = () => {
   const gridRef = useRef(null);
 
   useEffect(() => {
     // GSAP animations for cards
     gsap.fromTo(
-      gridRef.current.children, 
+      gridRef.current.children,
       { opacity: 0, y: 50, scale: 0.9 }, // Start state (invisible, slightly lower, and smaller)
-      { 
-        opacity: 1, 
-        y: 0, 
+      {
+        opacity: 1,
+        y: 0,
         scale: 1, // End state (visible, in place, and normal size)
-        duration: 1.2, 
+        duration: 1.2,
         stagger: 0.3, // Delay each card's animation by 0.3 seconds
-        ease: "power4.out" // Smooth easing function
+        ease: "power4.out", // Smooth easing function
       }
     );
 
@@ -81,18 +81,25 @@ const MainContent = () => {
   const router = useRouter();
 
   return (
-    <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-12 px-32 py-20 ">
+    <div
+      ref={gridRef}
+      className="grid grid-cols-1 md:grid-cols-2 gap-12 px-32 py-20 "
+    >
       {cardData.map((card) => (
         <div
           key={card.id}
           className="card bg-white shadow-lg overflow-hidden p-4 cursor-pointer border-black border-2 rounded-xl"
         >
-          <img
+          <Image
             src={card.image}
             alt={card.title}
+            width={10}
+            height={10}
             className="w-full h-80 object-cover rounded-md"
           />
-          <h3 className="text-lg font-semibold mt-2 text-black">{card.title}</h3>
+          <h3 className="text-lg font-semibold mt-2 text-black">
+            {card.title}
+          </h3>
           <p className="text-gray-600">{card.content}</p>
           <button
             className="mt-4 bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600"
