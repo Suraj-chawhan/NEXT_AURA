@@ -1,4 +1,3 @@
-import Gamebox from "@/Components/Gamebox";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
